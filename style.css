@@ -1,0 +1,154 @@
+@font-face {
+    font-family: "Hacker-Font";
+    src: url(./Fonts/Hacked-KerX.ttf);
+}
+
+@font-face {
+    font-family: "Hackout-Font";
+    src: url(./Fonts/Hackout-Eaw5j.otf);
+}
+
+@font-face {
+    font-family: "Bad-Signal";
+    src: url(./Fonts/Bad-Signal.otf);
+}
+
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --hacker-green: #20c20e;
+    --pale-green: RGB(100, 149, 104);
+    --hacker-font: "Hacker-Font", serif;
+    --hack-out: "Hackout-Font", serif;
+    --bad-signal: "Bad-Signal", serif;
+
+}
+
+body {
+    background-color: black;
+
+}
+
+.greenText {
+    color: var(--hacker-green);
+
+}
+
+nav {
+    font-family: var(--hacker-font);
+    text-align: center;
+    font-size: 5rem;
+}
+
+.terminal {
+    width: 90vw;
+    height: auto;
+    border: 0.1em solid white;
+    margin: auto;
+    z-index: 1;
+    line-height: 2em;
+}
+
+.bora02em {
+    border-radius: 0.5em;
+}
+
+.terminal p {
+    font-size: 1.2em;
+    white-space: pre-wrap;
+    font-family: var(--hack-out);
+    padding: 1%;
+    letter-spacing: 0.1em;
+}
+
+.white0p1border {
+    border: 0.1em solid white;
+}
+
+.flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bad-signal-2em{
+    font-size: 2em;
+    font-family: var(--bad-signal);
+}
+.prompt {
+    text-align: center;
+    color: orange;
+    width: 50vw;
+    height: 20vh;
+    background-color: rgba(138, 138, 138, 0.5);
+    z-index: 2;
+    letter-spacing: 0.2em;
+}
+#begin-confirmation{
+    color: red;
+    background-color: rgba(138, 138, 138, 0.5);
+    z-index: 2;
+    /* padding: 5%; */
+    flex-direction: column;
+    gap: 1em;
+    width: 50vw;
+    height: 35vh;
+    
+}
+
+#confirmToStart{
+    font-family: var(--bad-signal);
+    padding: 2%;
+    background-color: rgb(110, 110, 110);
+    border-radius: 0.5em;
+    box-shadow: 0px 0px 10px 2px #20c20e;
+    letter-spacing: 0.1rem;
+}
+#confirmToStart:hover{
+    background-color: rgb(201, 14, 14);
+    box-shadow: 0px 0px 10px 4px #095c00;
+    color: white;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+#begin-confirmation h3{
+    letter-spacing: 0.1em;
+    white-space: nowrap;
+}
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.magic {
+    display: none;
+}
+
+.vanish-animation{
+    animation: vanish 1.5s forwards;
+}
+.Blank{
+    background-color: white;
+}
+
+@keyframes vanish {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@media (max-width:480px) {
+    .terminal p {
+        font-size: small;
+    }
+}
